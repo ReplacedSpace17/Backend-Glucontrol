@@ -54,7 +54,7 @@ function InsertarUsuarios(req, res, data) {
               console.error('Error al realizar el INSERT en Users:', error);
               res.sendStatus(500);
             } else {
-              console.log('Usuario agregado a Users');
+              console.log("> Usuario agregado: " + dataUsuarios.Email);
               // Después de ambas consultas exitosas, envía la respuesta
               res.sendStatus(201);
             }

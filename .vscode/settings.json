@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/6e9e4af7-25ba-41b9-bccc-c6e88a33194b/resourceGroups/LabGpro/providers/Microsoft.Web/sites/BackendGlucontrol",
+    "appService.deploySubpath": "."
+}

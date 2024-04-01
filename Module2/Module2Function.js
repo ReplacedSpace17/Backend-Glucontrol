@@ -13,14 +13,16 @@ async function Login(req, res, data) {
       const user = rows[0];
       if (user.Password === Password) {
         // Contraseña coincidente, inicio de sesión exitoso
-        console.log("Bienvenido user");
+        console.log("> Inicio de sesión: " +user.UID);
         res.status(200).json({ message: 'Inicio de sesión exitoso', user });
+        return user.UID;
       } else {
         // Contraseña incorrecta
-        console.log("Auth fallida");
+        console.log("> Autenticación fallida: ");
         res.status(401).json({ error: 'Error de autenticación: contraseña incorrecta' });
       }
     } else {
+      console.log("> User (404)");
       // No se encontró el usuario
       res.status(404).json({ error: 'Error de autenticación: usuario no encontrado' });
     }
